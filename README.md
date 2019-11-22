@@ -1,24 +1,37 @@
 # vue-mobile-image-uncover
+The simplest solution for putting varius ratio images, which you don't want to break your layout.
 
-## Project setup
+[Live Demo](https://guansunyata.me/guansunyata/vue-mobile-image-uncover)
+
+
+(WIP)
+
+## Usage
 ```
-npm install
+import { UncoverList, UncoverImage } from 'vue-mobile-image-uncover';
+
+export default {
+  ...
+  components: {
+    Carousel,
+    Slide
+  }
+  ...
+}
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+### Example
+```html
+// UncoverList: the relative wrapper, which positioning the image during the animating
+<UncoverList>
+  <template slot-scope="{ togglePopup }">
 
-### Compiles and minifies for production
+    // UncoverImage: set a fixed height for the image in various ratio
+    <UncoverImage
+      image-url="http://example.com/example.png"
+      height="220"
+      @pop-image="togglePopup"
+    />
+  </template>
+</UncoverList>
 ```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
