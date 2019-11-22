@@ -13,9 +13,9 @@ import { UncoverList, UncoverImage } from 'vue-mobile-image-uncover';
 export default {
   ...
   components: {
-    Carousel,
-    Slide
-  }
+    UncoverList,
+    UncoverImage,
+  },
   ...
 }
 ```
